@@ -1,0 +1,200 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Payment System Flowchart">
+    <mxGraphModel dx="1434" dy="788" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="1400">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        
+        <!-- Kasir Container -->
+        <mxCell id="kasir-container" value="Kasir" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="300" y="40" width="280" height="120" as="geometry" />
+        </mxCell>
+        
+        <!-- Scan Produk -->
+        <mxCell id="scan-produk" value="Scan Produk" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="kasir-container">
+          <mxGeometry x="40" y="40" width="200" height="60" as="geometry" />
+        </mxCell>
+        
+        <!-- Sistem Container -->
+        <mxCell id="sistem-container" value="Sistem" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="300" y="220" width="280" height="120" as="geometry" />
+        </mxCell>
+        
+        <!-- Hitung Total -->
+        <mxCell id="hitung-total" value="Hitung Total" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="sistem-container">
+          <mxGeometry x="40" y="40" width="200" height="60" as="geometry" />
+        </mxCell>
+        
+        <!-- Arrow from Scan Produk to Hitung Total -->
+        <mxCell id="arrow1" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="scan-produk" target="sistem-container">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="400" as="sourcePoint" />
+            <mxPoint x="450" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- Decision Diamond - Metode -->
+        <mxCell id="decision-metode" value="Metode?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="400" width="160" height="120" as="geometry" />
+        </mxCell>
+        
+        <!-- Arrow from Hitung Total to Metode Decision -->
+        <mxCell id="arrow2" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="hitung-total" target="decision-metode">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="400" as="sourcePoint" />
+            <mxPoint x="450" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- Input Nominal (Tunai) -->
+        <mxCell id="input-nominal" value="Input nominal" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="550" width="130" height="60" as="geometry" />
+        </mxCell>
+        
+        <!-- Arrow Tunai -->
+        <mxCell id="arrow-tunai" value="Tunai" style="endArrow=classic;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="decision-metode" target="input-nominal">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="500" as="sourcePoint" />
+            <mxPoint x="450" y="450" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- Permintaan ke Payment Gateway (E-Wallet) -->
+        <mxCell id="payment-gateway" value="Permintaan ke Payment Gateway" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="520" y="550" width="300" height="60" as="geometry" />
+        </mxCell>
+        
+        <!-- Arrow E-Wallet -->
+        <mxCell id="arrow-ewallet" value="E-Wallet" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="decision-metode" target="payment-gateway">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="500" as="sourcePoint" />
+            <mxPoint x="450" y="450" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- Decision Diamond - Cukup -->
+        <mxCell id="decision-cukup" value="Cukup?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="65" y="690" width="160" height="120" as="geometry" />
+        </mxCell>
+        
+        <!-- Arrow from Input Nominal to Cukup -->
+        <mxCell id="arrow3" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="input-nominal" target="decision-cukup">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="700" as="sourcePoint" />
+            <mxPoint x="450" y="650" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- Tolak & Minta Ulang -->
+        <mxCell id="tolak-ulang" value="Tolak &amp; Minta Ulang" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="20" y="910" width="200" height="60" as="geometry" />
+        </mxCell>
+        
+        <!-- Arrow Tidak from Cukup -->
+        <mxCell id="arrow-tidak-cukup" value="Tidak" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="decision-cukup" target="tolak-ulang">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="800" as="sourcePoint" />
+            <mxPoint x="450" y="750" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- Proses Pembayaran -->
+        <mxCell id="proses-pembayaran" value="Proses Pembayaran" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="290" y="910" width="240" height="60" as="geometry" />
+        </mxCell>
+        
+        <!-- Arrow Ya from Cukup -->
+        <mxCell id="arrow-ya-cukup" value="Ya" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="decision-cukup" target="proses-pembayaran">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="800" as="sourcePoint" />
+            <mxPoint x="450" y="750" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- Decision Diamond - Saldo Cukup -->
+        <mxCell id="decision-saldo" value="Saldo Cukup?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="590" y="690" width="160" height="120" as="geometry" />
+        </mxCell>
+        
+        <!-- Arrow from Payment Gateway to Saldo Cukup -->
+        <mxCell id="arrow4" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="payment-gateway" target="decision-saldo">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="700" as="sourcePoint" />
+            <mxPoint x="450" y="650" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- Otorisasi Berhasil -->
+        <mxCell id="otorisasi-berhasil" value="Otorisasi Berhasil" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="600" y="910" width="200" height="60" as="geometry" />
+        </mxCell>
+        
+        <!-- Arrow Ya from Saldo Cukup -->
+        <mxCell id="arrow-ya-saldo" value="Ya" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="decision-saldo" target="otorisasi-berhasil">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="850" as="sourcePoint" />
+            <mxPoint x="450" y="800" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- Gagal & Kembali -->
+        <mxCell id="gagal-kembali" value="Gagal &amp; Kembali" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="880" y="910" width="160" height="60" as="geometry" />
+        </mxCell>
+        
+        <!-- Arrow Tidak from Saldo Cukup -->
+        <mxCell id="arrow-tidak-saldo" value="Tidak" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="decision-saldo" target="gagal-kembali">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="750" y="750" as="sourcePoint" />
+            <mxPoint x="800" y="700" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- Cetak Struk -->
+        <mxCell id="cetak-struk" value="Cetak Struk" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="440" y="1090" width="200" height="60" as="geometry" />
+        </mxCell>
+        
+        <!-- Arrow from Proses Pembayaran to Cetak Struk -->
+        <mxCell id="arrow5" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="proses-pembayaran" target="cetak-struk">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="1050" as="sourcePoint" />
+            <mxPoint x="450" y="1000" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- Arrow from Otorisasi Berhasil to Cetak Struk -->
+        <mxCell id="arrow6" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="otorisasi-berhasil" target="cetak-struk">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="700" y="1050" as="sourcePoint" />
+            <mxPoint x="750" y="1000" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- Loop back from Tolak Ulang to Input Nominal -->
+        <mxCell id="loop-tolak" value="" style="endArrow=classic;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="tolak-ulang" target="input-nominal">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="20" y="800" as="sourcePoint" />
+            <mxPoint x="70" y="750" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="10" y="940" />
+              <mxPoint x="10" y="580" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- Loop back from Gagal Kembali to Decision Metode -->
+        <mxCell id="loop-gagal" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="gagal-kembali" target="decision-metode">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="900" y="600" as="sourcePoint" />
+            <mxPoint x="950" y="550" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1060" y="940" />
+              <mxPoint x="1060" y="460" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
