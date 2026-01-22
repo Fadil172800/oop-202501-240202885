@@ -1,0 +1,111 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="AgriPOS Use Case">
+    <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        
+        <!-- System Boundary -->
+        <mxCell id="2" value="AgriPOS" style="swimlane;startSize=40;fontSize=16;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="200" y="40" width="900" height="700" as="geometry" />
+        </mxCell>
+        
+        <!-- Use Cases -->
+        <mxCell id="3" value="Kelola Produk" style="ellipse;whiteSpace=wrap;html=1;fontSize=14;" parent="2" vertex="1">
+          <mxGeometry x="250" y="90" width="200" height="80" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="4" value="Lihat Laporan" style="ellipse;whiteSpace=wrap;html=1;fontSize=14;" parent="2" vertex="1">
+          <mxGeometry x="250" y="230" width="200" height="80" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="5" value="Checkout" style="ellipse;whiteSpace=wrap;html=1;fontSize=14;" parent="2" vertex="1">
+          <mxGeometry x="150" y="410" width="200" height="80" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="6" value="Cetak Struk" style="ellipse;whiteSpace=wrap;html=1;fontSize=14;" parent="2" vertex="1">
+          <mxGeometry x="150" y="570" width="200" height="80" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="7" value="Pembayaran Tunai" style="ellipse;whiteSpace=wrap;html=1;fontSize=14;" parent="2" vertex="1">
+          <mxGeometry x="520" y="380" width="240" height="80" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="8" value="Pembayaran E-Wallet" style="ellipse;whiteSpace=wrap;html=1;fontSize=14;" parent="2" vertex="1">
+          <mxGeometry x="520" y="500" width="240" height="80" as="geometry" />
+        </mxCell>
+        
+        <!-- Actors -->
+        <mxCell id="9" value="Admin" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;fontSize=14;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="70" y="180" width="60" height="120" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="10" value="Kasir" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;fontSize=14;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="70" y="500" width="60" height="120" as="geometry" />
+        </mxCell>
+        
+        <!-- Associations -->
+        <mxCell id="11" value="" style="endArrow=none;html=1;exitX=1;exitY=0.3;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="9" target="3" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="400" as="sourcePoint" />
+            <mxPoint x="450" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="12" value="" style="endArrow=none;html=1;exitX=1;exitY=0.7;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="9" target="4" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="400" as="sourcePoint" />
+            <mxPoint x="450" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="13" value="" style="endArrow=none;html=1;exitX=1;exitY=0.3;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="10" target="5" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="400" as="sourcePoint" />
+            <mxPoint x="450" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="14" value="" style="endArrow=none;html=1;exitX=1;exitY=0.7;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="10" target="6" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="400" as="sourcePoint" />
+            <mxPoint x="450" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- Include Relationships -->
+        <mxCell id="15" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;" style="endArrow=open;html=1;dashed=1;dashPattern=3 3;exitX=1;exitY=0.3;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="5" target="7" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="500" as="sourcePoint" />
+            <mxPoint x="450" y="450" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="16" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;" style="endArrow=open;html=1;dashed=1;dashPattern=3 3;exitX=1;exitY=0.7;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="5" target="8" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="500" as="sourcePoint" />
+            <mxPoint x="450" y="450" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- Labels for associations -->
+        <mxCell id="17" value="uses" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="155" y="150" width="50" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="18" value="uses" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="155" y="250" width="50" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="19" value="uses" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="155" y="480" width="50" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="20" value="uses" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="155" y="630" width="50" height="30" as="geometry" />
+        </mxCell>
+        
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
