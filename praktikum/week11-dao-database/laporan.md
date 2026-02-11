@@ -1,73 +1,78 @@
-# Laporan Praktikum Minggu 1 (sesuaikan minggu ke berapa?)
-Topik: [Tuliskan judul topik, misalnya "Class dan Object"]
+Laporan Praktikum Minggu 11
+Topik: Data Access Object (DAO) dan CRUD Database dengan JDBC (PostgreSQL)
+Identitas
+Nama : Syukron Nur Fadillah
+NIM : 240202885
+Kelas : 3IKKA
 
-## Identitas
-- Nama  : [Nama Mahasiswa]
-- NIM   : [NIM Mahasiswa]
-- Kelas : [Kelas]
+Tujuan
+Tujuan praktikum minggu ke-11 ini adalah:
+Memahami konsep Data Access Object (DAO) dalam pemrograman berorientasi objek.
+Mengetahui cara menghubungkan aplikasi Java dengan database PostgreSQL menggunakan JDBC.
+Memahami alur kerja operasi CRUD (Create, Read, Update, Delete).
+Mengetahui cara integrasi DAO dengan class aplikasi OOP.
 
----
+Dasar Teori
+DAO (Data Access Object) memisahkan logika akses database dari logika utama program.
+JDBC (Java Database Connectivity) digunakan untuk menghubungkan Java dengan database.
+PreparedStatement digunakan untuk mengeksekusi query SQL dengan parameter agar lebih aman.
+CRUD terdiri dari operasi Create, Read, Update, dan Delete pada database.
+Pemisahan layer membuat program lebih rapi dan mudah dikembangkan.
 
-## Tujuan
-(Tuliskan tujuan praktikum minggu ini.  
-Contoh: *Mahasiswa memahami konsep class dan object serta dapat membuat class Produk dengan enkapsulasi.*)
+Langkah Praktikum
+Mempelajari materi DAO dan JDBC dari modul praktikum Week 11.
+Menyiapkan database PostgreSQL (percobaan download dan instalasi PostgreSQL).
+Membuat struktur folder project sesuai panduan praktikum.
+Membuat class Product, interface ProductDAO, dan class ProductDAOImpl.
+Membuat class MainDAOTest untuk integrasi DAO.
+Melakukan percobaan koneksi database menggunakan JDBC.
 
----
+Commit project dengan format:
 
-## Dasar Teori
-(Tuliskan ringkasan teori singkat (3–5 poin) yang mendasari praktikum.  
-Contoh:  
-1. Class adalah blueprint dari objek.  
-2. Object adalah instansiasi dari class.  
-3. Enkapsulasi digunakan untuk menyembunyikan data.)
+week11-dao-database: implementasi DAO dan CRUD JDBC
+📌 Catatan:
+Proyek belum dapat dijalankan sepenuhnya karena proses download PostgreSQL gagal dan terjadi kendala saat login ke PostgreSQL.
 
----
+Hasil Eksekusi
 
-## Langkah Praktikum
-(Tuliskan Langkah-langkah dalam prakrikum, contoh:
-1. Langkah-langkah yang dilakukan (setup, coding, run).  
-2. File/kode yang dibuat.  
-3. Commit message yang digunakan.)
+📌 Belum ada hasil eksekusi karena:
 
----
+PostgreSQL gagal di-download / di-install
 
-## Kode Program
-(Tuliskan kode utama yang dibuat, contoh:  
+Gagal login ke PostgreSQL
 
-```java
-// Contoh
-Produk p1 = new Produk("BNH-001", "Benih Padi", 25000, 100);
-System.out.println(p1.getNama());
-```
-)
----
+Aplikasi Java belum bisa terhubung ke database
 
-## Hasil Eksekusi
-(Sertakan screenshot hasil eksekusi program.  
-![Screenshot hasil](screenshots/hasil.png)
-)
----
+Sehingga screenshot hasil CRUD belum tersedia.
 
-## Analisis
-(
-- Jelaskan bagaimana kode berjalan.  
-- Apa perbedaan pendekatan minggu ini dibanding minggu sebelumnya.  
-- Kendala yang dihadapi dan cara mengatasinya.  
-)
----
 
-## Kesimpulan
-(Tuliskan kesimpulan dari praktikum minggu ini.  
-Contoh: *Dengan menggunakan class dan object, program menjadi lebih terstruktur dan mudah dikembangkan.*)
+Analisis
+Secara konsep, arsitektur DAO sudah dipahami:
+Product sebagai Model
+ProductDAO sebagai interface
+ProductDAOImpl sebagai implementasi
+MainDAOTest sebagai integrasi aplikasi
 
----
+Kendala utama:
+Gagal download PostgreSQL (koneksi internet / error installer).
+Gagal login PostgreSQL (password salah atau service belum berjalan).
+Akibatnya koneksi JDBC gagal dan CRUD tidak dapat diuji.
 
-## Quiz
-(1. [Tuliskan kembali pertanyaan 1 dari panduan]  
-   **Jawaban:** …  
 
-2. [Tuliskan kembali pertanyaan 2 dari panduan]  
-   **Jawaban:** …  
+Kesimpulan
 
-3. [Tuliskan kembali pertanyaan 3 dari panduan]  
-   **Jawaban:** …  )
+Pada praktikum minggu ke-11 ini, implementasi aplikasi DAO dan CRUD menggunakan JDBC belum dapat dijalankan karena terjadi kendala teknis pada proses instalasi dan login PostgreSQL. Akibatnya, koneksi antara aplikasi Java dan database belum berhasil sehingga proses pengujian operasi CRUD (Create, Read, Update, Delete) belum dapat dilakukan.
+
+Quiz
+
+Apa itu DAO?
+Jawaban:
+DAO adalah pola desain untuk memisahkan akses database dari logika utama aplikasi.
+
+Apa fungsi JDBC?
+Jawaban:
+JDBC berfungsi untuk menghubungkan aplikasi Java dengan database.
+
+Mengapa menggunakan PreparedStatement?
+Jawaban:
+Untuk keamanan (mencegah SQL Injection) dan memudahkan penggunaan parameter dalam query SQL.
