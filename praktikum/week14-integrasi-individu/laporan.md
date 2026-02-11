@@ -1,73 +1,80 @@
-# Laporan Praktikum Minggu 1 (sesuaikan minggu ke berapa?)
-Topik: [Tuliskan judul topik, misalnya "Class dan Object"]
+Laporan Praktikum Minggu 14
 
-## Identitas
-- Nama  : [Nama Mahasiswa]
-- NIM   : [NIM Mahasiswa]
-- Kelas : [Kelas]
+Topik: Integrasi Individu (OOP + Database + GUI) – Agri-POS
 
----
+Identitas
 
-## Tujuan
-(Tuliskan tujuan praktikum minggu ini.  
-Contoh: *Mahasiswa memahami konsep class dan object serta dapat membuat class Produk dengan enkapsulasi.*)
+Nama : Syukron Nur Fadillah
+NIM : 240202885
+Kelas : 3IKKA
 
----
+Tujuan
 
-## Dasar Teori
-(Tuliskan ringkasan teori singkat (3–5 poin) yang mendasari praktikum.  
-Contoh:  
-1. Class adalah blueprint dari objek.  
-2. Object adalah instansiasi dari class.  
-3. Enkapsulasi digunakan untuk menyembunyikan data.)
+Memahami integrasi konsep OOP (Bab 1–5) dalam satu aplikasi utuh.
 
----
+Memahami penerapan rancangan UML & SOLID (Bab 6) ke dalam kode.
 
-## Langkah Praktikum
-(Tuliskan Langkah-langkah dalam prakrikum, contoh:
-1. Langkah-langkah yang dilakukan (setup, coding, run).  
-2. File/kode yang dibuat.  
-3. Commit message yang digunakan.)
+Memahami integrasi Collections (keranjang) ke dalam alur aplikasi.
 
----
+Memahami penerapan exception handling untuk validasi dan error flow.
 
-## Kode Program
-(Tuliskan kode utama yang dibuat, contoh:  
+Memahami penggunaan design pattern dan unit testing.
 
-```java
-// Contoh
-Produk p1 = new Produk("BNH-001", "Benih Padi", 25000, 100);
-System.out.println(p1.getNama());
-```
-)
----
+Memahami integrasi DAO + JDBC dengan GUI JavaFX.
 
-## Hasil Eksekusi
-(Sertakan screenshot hasil eksekusi program.  
-![Screenshot hasil](screenshots/hasil.png)
-)
----
+Dasar Teori
 
-## Analisis
-(
-- Jelaskan bagaimana kode berjalan.  
-- Apa perbedaan pendekatan minggu ini dibanding minggu sebelumnya.  
-- Kendala yang dihadapi dan cara mengatasinya.  
-)
----
+Integrasi aplikasi menggabungkan layer Model, View, Controller, Service, dan DAO.
 
-## Kesimpulan
-(Tuliskan kesimpulan dari praktikum minggu ini.  
-Contoh: *Dengan menggunakan class dan object, program menjadi lebih terstruktur dan mudah dikembangkan.*)
+MVC + SOLID (DIP) memastikan View tidak langsung mengakses database.
 
----
+Collections digunakan untuk mengelola data keranjang belanja.
 
-## Quiz
-(1. [Tuliskan kembali pertanyaan 1 dari panduan]  
-   **Jawaban:** …  
+Exception Handling digunakan untuk validasi input dan alur error.
 
-2. [Tuliskan kembali pertanyaan 2 dari panduan]  
-   **Jawaban:** …  
+Design Pattern membantu struktur kode lebih rapi dan reusable.
 
-3. [Tuliskan kembali pertanyaan 3 dari panduan]  
-   **Jawaban:** …  )
+JUnit digunakan untuk pengujian logika non-UI.
+
+Langkah Praktikum
+
+Mempelajari modul Bab 14 (Integrasi Individu Agri-POS).
+
+Menggabungkan rancangan dari Bab 1–13 ke dalam satu aplikasi.
+
+Menyiapkan struktur project integrasi (Model, DAO, Service, Controller, View).
+
+Merancang alur produk (CRUD) dan keranjang belanja.
+
+Menyiapkan rencana penggunaan exception, pattern, dan unit testing.
+
+📌 Catatan Penting (Status Proyek):
+Praktikum belum dapat dijalankan karena ketergantungan pada:
+
+Week 11 (DAO + JDBC + PostgreSQL) → gagal download & login PostgreSQL
+
+Sehingga backend tidak aktif dan GUI tidak dapat terhubung ke database.
+
+Hasil Eksekusi
+
+📌 Belum ada hasil eksekusi aplikasi Agri-POS karena backend (DAO + PostgreSQL) dan GUI (Week 12–13) belum berhasil dikonfigurasi.
+
+Kendala utama
+
+PostgreSQL gagal di-download / instalasi.
+
+Gagal login PostgreSQL.
+
+Dampak:
+
+CRUD produk tidak dapat dijalankan.
+
+Data tidak tersimpan ke database.
+
+GUI tidak bisa menampilkan data produk.
+
+Keranjang dan integrasi fitur tidak bisa diuji.
+
+Kesimpulan
+
+Pada praktikum minggu ke-14, integrasi individu aplikasi Agri-POS belum dapat direalisasikan karena modul backend (DAO + PostgreSQL) pada Week 11 belum berhasil dijalankan akibat kendala teknis pada proses download dan login PostgreSQL. Akibatnya, integrasi GUI (Week 12–13) serta fitur lanjutan seperti keranjang, exception handling, design pattern, dan unit testing belum dapat diuji. Meskipun implementasi belum berjalan, konsep integrasi OOP, MVC, DAO, dan GUI JavaFX telah dipahami. Praktikum akan dilanjutkan setelah kendala teknis pada Week 11 berhasil diatasi.
